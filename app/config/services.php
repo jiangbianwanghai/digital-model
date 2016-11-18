@@ -96,3 +96,20 @@ $di->setShared('session', function () {
 
     return $session;
 });
+
+/**
+ * add mongo
+ */
+
+$di->set(
+    "mongo",
+    function () {
+        $mongo = new MongoClient('mongodb://mongoadmin:mongoadmin@192.168.8.234:27017');
+        return $mongo->selectDB("demo");
+    },
+    true
+);
+
+$di->set('collectionManager', function(){
+    return new Phalcon\Mvc\Collection\Manager();
+}, true);
