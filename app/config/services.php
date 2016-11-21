@@ -12,6 +12,7 @@ use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 use Phalcon\Mvc\Model\Metadata\Memory as MetaDataAdapter;
 use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Phalcon\Flash\Direct as Flash;
+use Phalcon\Mvc\Dispatcher as Dispatcher;
 
 /**
  * The FactoryDefault Dependency Injector automatically register the right services providing a full stack framework
@@ -113,3 +114,16 @@ $di->set(
 $di->set('collectionManager', function(){
     return new Phalcon\Mvc\Collection\Manager();
 }, true);
+
+/**
+ * Add routing capabilities
+ */
+$di->set('router', function () {
+    return require __DIR__ . '/routes.php';
+});
+
+$di->set('dispatcher', function () {
+    $dispatcher = new Dispatcher();
+    //$dispatcher->setDefaultNamespace('App');
+    return $dispatcher;
+});

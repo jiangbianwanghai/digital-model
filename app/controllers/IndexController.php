@@ -15,5 +15,10 @@ class IndexController extends ControllerBase
         $this->view->setVar("uuid", $user->uuid);
     }
 
+    public function route404Action()
+    {
+        header("HTTP/1.1 404 Not Found");exit;
+    }
+
 }
 
