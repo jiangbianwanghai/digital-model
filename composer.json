@@ -1,9 +1,6 @@
 {
     "require": {
         "phpunit/phpunit": "~5.5",
-        "phalcon/incubator": "^2.0"
-    },
-    "require-dev": {
-      "techpivot/phalcon-ci-installer": "~1.0"
-  }
+	"phalcon/incubator": "^2.0"
+    }
 }
