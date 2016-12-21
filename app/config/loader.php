@@ -11,3 +11,4 @@ $loader->registerDirs(
         $config->application->modelsDir
     )
 )->register();
+require __DIR__ . '/../../vendor/autoload.php';
