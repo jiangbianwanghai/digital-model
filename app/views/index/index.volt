@@ -11,6 +11,27 @@
     <body>
         <div class="container">
             <div class="page-header">
+            <h1>Model小试验</h1>
+            </div>
+            <p>基于mongodb扩展</p>
+            <p><a href="/index/findone" target="_blank">查找单条（基于MongoDB扩展）</a></p>
+            <p><a href="/index/find" target="_blank">查找多条（基于MongoDB扩展）</a></p>
+            <p><a href="/index/insertone" target="_blank">单条插入（基于MongoDB扩展）</a></p>
+            <p><a href="/index/insertmany" target="_blank">多条插入（基于MongoDB扩展）</a></p>
+            <p><a href="/index/updateone" target="_blank">单条更新（基于MongoDB扩展）</a></p>
+            <p><a href="/index/updatemany" target="_blank">多条更新（基于MongoDB扩展）</a></p>
+            <p><a href="/index/deleteone" target="_blank">单条删除（基于MongoDB扩展）</a></p>
+            <p><a href="/index/deletemany" target="_blank">多条删除（基于MongoDB扩展）</a></p>
+            <p><a href="/index/findoneanddelete" target="_blank">查到单条并删除（基于MongoDB扩展）</a></p>
+            <p><a href="/index/count" target="_blank">得到查询数量（基于MongoDB扩展）</a></p>
+            <p>基于mongo扩展</p>
+            <p><a href="/mongo/insert" target="_blank">单条插入</a></p>
+            <p><a href="/mongo/find" target="_blank">查询多条</a></p>
+            <p><a href="/mongo/findone" target="_blank">查询单条</a></p>
+            <p><a href="/mongo/findbyid" target="_blank">根据主键查询</a></p>
+            <p><a href="/mongo/update" target="_blank">更新</a></p>
+            <p><a href="/mongo/delete" target="_blank">删除</a></p>
+            <div class="page-header">
             <h1>欢迎使用江边望海提供的算法模型</h1>
             </div>
 
