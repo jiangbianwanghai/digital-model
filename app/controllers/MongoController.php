@@ -22,9 +22,10 @@ class mongoController extends ControllerBase
 
     public function updateAction()
     {
-        $team = Teams::findById("58db2a2a64bcfa3f21d56ded");
+        $team = Teams::findById("58db6d8d64bcfa083bd56df2");
         $team->name = 'kevin';
         $team->save();
+        $this->view->disable();
     }
 
     public function deleteAction()
@@ -40,6 +41,7 @@ class mongoController extends ControllerBase
                 echo "The robot was deleted successfully!";
             }
         }
+        $this->view->disable();
     }
 
     public function findAction()
@@ -58,6 +60,7 @@ class mongoController extends ControllerBase
         foreach ($teams as $team) {
             echo $team->name, "<br />";
         }
+        $this->view->disable();
     }
 
     public function findoneAction()
@@ -68,8 +71,9 @@ class mongoController extends ControllerBase
                     'name' => 'Astro Boy'
                 )
             )
-        );
-        echo $team->_id;
+        )->toArray();
+        print_r($team);
+        $this->view->disable();
     }
 
     public function findbyidAction()
@@ -78,6 +82,7 @@ class mongoController extends ControllerBase
         $team->name = 'bluerainerz11';
         $team->save();
         echo $team->name;
+        $this->view->disable();
     }
 }
 
